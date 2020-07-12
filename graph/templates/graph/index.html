@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'graph/style.css' %}"
+    />
+  </head>
+  <body>
+    <div class="sideform">
+      <form method="post" id="main-form">
+        <h5>Select the Parameter</h5>
+        <input type="checkbox" id="temp" name="temp" value="temp" />
+        <label for="temp">Temperature</label>
+        <br />
+        <input type="checkbox" id="ap" name="ap" value="ap" />
+        <label for="ap">Air Pressure</label>
+        <br />
+        <input type="checkbox" id="ws" name="ws" value="ws" />
+        <label for="ws">Wind Speed</label>
+        <br />
+        <input type="checkbox" id="rh" name="rh" value="rh" />
+        <label for="rh">Relative Humidity</label>
+        <br />
+        <hr />
+        <h5>Select Data Frequency</h5>
+        <input type="radio" id="hourly" name="datafreq" value="hourly" />
+        <label for="hourly">Hourly Average</label>
+        <br />
+        <input type="radio" id="daily" name="datafreq" value="daily" />
+        <label for="daily">Daily Average</label>
+        <br />
+        <input type="radio" id="monthly" name="datafreq" value="monthly" />
+        <label for="monthly">Monthly Average</label>
+        <br />
+        <hr />
+        <h5>Select Plot Type</h5>
+        <select name="plottype" id="plottype">
+          <option value="trend">Trend</option>
+          <option value="seasonal">Seasonal</option>
+          <option value="diurnal">Diurnal Analysis</option>
+          <option value="corr">Correlation Matrix</option>
+        </select>
+        <br />
+        <hr />
+        <div id="dynamic">
+          <h5>Time Interval</h5>
+          <input
+            type="date"
+            id="start"
+            name="start"
+            min="2016-06-02"
+            max="2019-06-19"
+            value="2016-06-02"
+          />
+          <br />
+          <input
+            type="date"
+            id="end"
+            name="end"
+            min="2016-06-02"
+            max="2019-06-19"
+            value="2019-06-19"
+          />
+          <br />
+        </div>
+        <input type="submit" value="Submit" id="submitbtn" />
+      </form>
+    </div>
+    <div class="main">
+        <img
+        src="data:image/png;base64,{{data}}"
+        alt=""
+        height="600px"
+        width="1000px"
+      />
+    </div>
+  </body>
+  <script src="{% static 'graph/script.js'  %}"></script>
+</html>

@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.sideform {
+  height: 100vh;
+  width: 20vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+}
+.sideform form {
+  padding: 20px;
+  font-size: 1.1rem;
+}
+form h5 {
+  margin: 10px 10px;
+}
+form hr {
+  margin: 15px 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+form label {
+  padding-left: 10px;
+}
+#plottype {
+  margin-left: 20px;
+}
+#submitbtn {
+  margin-top: 20px;
+  background-color: #4bb543;
+  color: white;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: none;
+  padding: 10px 20px;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#submitbtn:hover {
+  transform: scale(1.1, 1.1);
+}
+.main {
+  margin-left: 20vw;
+  overflow: scroll;
+}
+.main h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+#dynamic {
+  font-size: 0.6rem !important ;
+}
