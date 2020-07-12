@@ -45,9 +45,9 @@
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
-
+  cursor: pointer;
   margin-right: 30px;
-  padding: 25px 5px 50px 5px;
+  padding: 20px 5px 30px 5px;
 }
 .links li:hover {
   border-top: 5px solid #20639b;
@@ -70,16 +70,35 @@
   width: 40vw;
   background-color: white;
   font-family: Noto Sans KR, sans-serif;
-  text-align: center;
+
   color: black;
 }
-.center-text h4 {
-  margin-top: 10px;
+.center-text h6 {
+  margin: 10px 0 19px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #504f4f;
 }
-.center-text p {
-  margin-left: 20px;
-  text-align: left;
-  margin-top: 20px;
+.news-box {
+  color: #504f4f;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.news-box:hover {
+  background-color: rgb(214, 227, 239);
+}
+.news-date {
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: center;
+}
+.news-box p {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  margin-left: 10px;
+  word-wrap: normal;
 }
 .main-links {
   border-top: 3px solid rgb(53, 129, 179);
